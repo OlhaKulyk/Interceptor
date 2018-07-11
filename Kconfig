@@ -1,0 +1,10 @@
+config SECURITY_INTERCEPTOR
+	bool "Interceptor security module"
+	depends on SYSFS
+	depends on MULTIUSER
+	depends on SECURITY
+	select SECURITYFS
+	select SECURITY_PATH
+	default y
+	help
+	  Intercept file mapping in memory
